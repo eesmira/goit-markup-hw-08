@@ -150,13 +150,20 @@ img {
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.179;
   letter-spacing: 0.03em;
   color: var(--primary-txt-color);
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .header {
@@ -492,67 +499,76 @@ img {
   }
 }
 
-.products-section {
-  padding-bottom: 94px;
+@media screen and (max-width: 1199px) {
+  .products-section {
+    display: none;
+  }
 }
 
-.products {
-  display: flex;
-}
-
-.products.list {
-  margin: -15px;
-}
-
-.products-item {
-  position: relative;
-  margin: 15px;
-}
-
-.products-title {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  background-color: rgba(47, 48, 58, 0.8);
-  color: var(--additional-txt-color);
+@media screen and (min-width: 1200px) {
+  .products-section {
+    padding-bottom: 94px;
+  }
+  .products {
+    display: flex;
+  }
+  .products.list {
+    margin: -15px;
+  }
+  .products-item {
+    position: relative;
+    margin: 15px;
+  }
+  .products-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: var(--additional-txt-color);
+  }
 }
 
 .team-section {
   background-color: var(--secondary-bg-color);
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .team-section .title {
   margin-bottom: 10px;
 }
 
-.team.list {
-  display: flex;
-  margin: -15px;
-}
-
 .team-item {
-  margin: 15px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team-item .list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.thumb {
+  height: 460px;
+}
+
+.thumb > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .team-item-content {
-  padding: 30px;
+  padding: 30px 30px 24px 30px;
   background-color: var(--primary-bg-color);
   border-radius: 0px 0px 4px 4px;
 }
@@ -561,6 +577,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.team-item-content .social-list-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .team-item-content .social-link {
@@ -573,12 +593,6 @@ img {
   border-radius: 50%;
   color: var(--icon-color);
   fill: currentColor;
-  transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
-}
-
-.team-item-content .social-link:hover, .team-item-content .social-link:focus {
-  background-color: var(--accent-color);
-  color: var(--additional-txt-color);
 }
 
 .team .title {
@@ -591,12 +605,150 @@ img {
 }
 
 .team .description {
+  margin-top: 0;
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--secondary-txt-color);
   text-align: center;
+}
+
+.team > li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-item {
+    margin: 15px;
+  }
+  .team-item .list {
+    display: flex;
+    justify-content: center;
+  }
+  .team.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .thumb {
+    width: 354px;
+    height: 374px;
+  }
+  .thumb > img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .team-item-content {
+    padding: 30px 30px 24px 30px;
+    background-color: var(--primary-bg-color);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .team-item-content .social-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .team-item-content .social-list-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  .team-item-content .social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border-radius: 50%;
+    color: var(--icon-color);
+    fill: currentColor;
+  }
+  .team .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--primary-txt-color);
+    text-align: center;
+  }
+  .team .description {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--secondary-txt-color);
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-section {
+    background-color: var(--secondary-bg-color);
+    padding: 94px 0;
+  }
+  .team-section .title {
+    margin-bottom: 10px;
+  }
+  .team.list {
+    display: flex;
+    margin: -15px;
+  }
+  .team-item {
+    margin: 15px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .team-item .list {
+    display: flex;
+    justify-content: space-around;
+  }
+  .team-item-content {
+    padding: 30px;
+    background-color: var(--primary-bg-color);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .team-item-content .social-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .team-item-content .social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border-radius: 50%;
+    color: var(--icon-color);
+    fill: currentColor;
+    transition: color var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
+  }
+  .team-item-content .social-link:hover, .team-item-content .social-link:focus {
+    background-color: var(--accent-color);
+    color: var(--additional-txt-color);
+  }
+  .team .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--primary-txt-color);
+    text-align: center;
+  }
+  .team .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--secondary-txt-color);
+    text-align: center;
+  }
 }
 
 .clients-section {
