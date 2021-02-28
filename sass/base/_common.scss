@@ -1,7 +1,10 @@
 body {
-  padding-top: 80px;
   font-family: 'Roboto', sans-serif;
   background-color: var(--primary-bg-color);
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 80px;
+  }
 }
 
 h1,
@@ -55,20 +58,6 @@ img {
   &:hover::after {
     transform: rotateY(180deg);
   }
-}
-
-.logo {
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
-
-  line-height: 1.192;
-  letter-spacing: 0.03em;
-  color: var(--primary-logo-color);
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
 }
 
 .accent {
