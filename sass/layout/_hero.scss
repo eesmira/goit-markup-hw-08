@@ -87,14 +87,13 @@
 //     }
 //   }
 
-  .modal-btn {
-    cursor: pointer;
-    transition: background-color var(--transition-duration)
-      var(--transition-timing-function);
+.modal-btn {
+  cursor: pointer;
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 
-    &:hover,
-    &:focus {
-      background-color: #188ce8;
-    }
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
   }
 }
