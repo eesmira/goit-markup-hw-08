@@ -36,10 +36,63 @@
           </ul>
         </nav>
 
+        <section class="mobile-menu-section">
+          <button type="button" class="mobile-menu-btn" data-menu-button>
+            <svg class="mobile-menu-icon" width="40" height="40">
+              <use href="./images/sprite.svg#mobile-menu-icon"></use>
+            </svg>
+          </button>
+
+          <div class="mobile-menu is-open" data-menu>
+            <button type="button" class="mobile-menu-close-btn" data-menu-close>
+              <svg class="mobile-menu-close-icon">
+                <use href="./images/sprite.svg#close-btn-icon"></use>
+              </svg>
+            </button>
+            <div class="mobile-menu-container">
+              <ul class="mobile-menu-nav list">
+                <li class="mobile-menu-item">
+                  <a href="./index.html" class="mobile-menu-link">Студия</a>
+                </li>
+                <li class="mobile-menu-item">
+                  <a href="./portfolio.html" class="mobile-menu-link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mobile-menu-item">
+                  <a href="#" class="mobile-menu-link">Контакты</a>
+                </li>
+              </ul>
+              <ul class="mobile-menu-contacts list">
+                <li class="contacts-item">
+                  <a href="" class="mobile-menu-phone">+38 096 111 11 11</a>
+                </li>
+                <li class="contacts-item">
+                  <a href="" class="mobile-menu-email">info@devstudio.com</a>
+                </li>
+              </ul>
+              <ul class="mobile-social-media list">
+                <li class="social-media-item">
+                  <a href="" class="social-media-link">Instagram</a>
+                </li>
+                <li class="social-media-item">
+                  <a href="" class="social-media-link">Twitter</a>
+                </li>
+                <li class="social-media-item">
+                  <a href="" class="social-media-link">Facebook</a>
+                </li>
+                <li class="social-media-item">
+                  <a href="" class="social-media-link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <ul class="contacts list">
           <li class="list-item">
             <a href="mailto:info@devstudio.com" class="header-contact link">
-              <svg class="contacts-icon email-icon" width="16" height="12">
+              <svg class="contacts-icon email-icon">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
 
@@ -48,7 +101,7 @@
           </li>
           <li class="list-item">
             <a href="tel:+380961111111" class="header-contact link"
-              ><svg class="contacts-icon tel-icon" width="10" height="16">
+              ><svg class="contacts-icon tel-icon">
                 <use href="./images/sprite.svg#icon-smartphone"></use></svg
               >+38 096 111 11 11</a
             >
@@ -119,7 +172,6 @@
               <img
                 src="./images/index-images/box1.jpg"
                 alt="Человек работает на компьютере"
-                width="370"
               />
               <div class="products-title">Десктопные приложения</div>
             </li>
@@ -127,7 +179,6 @@
               <img
                 src="./images/index-images/box2.jpg"
                 alt="Человек с смарт-фоном в руке"
-                width="370"
               />
               <div class="products-title">Мобильные приложения</div>
             </li>
@@ -135,7 +186,6 @@
               <img
                 src="./images/index-images/box3.jpg"
                 alt="Человек работает на планшете"
-                width="370"
               />
               <div class="products-title">Дизайнерские решения</div>
             </li>
@@ -149,40 +199,77 @@
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team list">
-           
             <li class="team-item">
-               <div class="thumb">
-                 <picture>
-  <source srcset="./images/index-images/team/team-1-desktop.webp 1x, ./images/index-images/team/team-1-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp" />
-<source srcset="./images/index-images/team/team-1-desktop.jpg 1x, ./images/index-images/team/team-1-desktop@2x.jpg 2x" media="(min-width:1200px)" />
+              <div class="thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-1-desktop.webp    1x,
+                      ./images/index-images/team/team-1-desktop@2x.webp 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-1-desktop.jpg    1x,
+                      ./images/index-images/team/team-1-desktop@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
 
-  <source srcset="./images/index-images/team/team-1-tablet.webp 1x, ./images/index-images/team/team-1-tablet@2x.webp 2x" media="(min-width:768px)" type="image/webp" />
-  <source srcset="./images/index-images/team/team-1-tablet.jpg 1x, ./images/index-images/team/team-1-tablet@2x.jpg 2x" media="(min-width:768px)" />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-1-tablet.webp    1x,
+                      ./images/index-images/team/team-1-tablet@2x.webp 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-1-tablet.jpg    1x,
+                      ./images/index-images/team/team-1-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
 
-  <source srcset="./images/index-images/team/team-1-mobile.webp 1x, ./images/index-images/team/team-1-mobile@2x.webp 2x" media="(min-width:320px)" type="image/webp">
-    <source srcset="./images/index-images/team/team-1-mobile.jpg 1x, ./images/index-images/team/team-1-mobile@2x.jpg 2x" media="(min-width:320px)">
-   <img class="team-picture"
-                src="./images/index-images/team/team-1.jpg"
-                alt="Фото сотрудника"/>
-</picture>
-                
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-1-mobile.webp    1x,
+                      ./images/index-images/team/team-1-mobile@2x.webp 2x
+                    "
+                    media="(min-width:320px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-1-mobile.jpg    1x,
+                      ./images/index-images/team/team-1-mobile@2x.jpg 2x
+                    "
+                    media="(min-width:320px)"
+                  />
+                  <img
+                    class="team-picture"
+                    src="./images/index-images/team/team-1.jpg"
+                    alt="Фото сотрудника"
+                  />
+                </picture>
               </div>
-              
+
               <div class="team-item-content">
                 <h3 class="title">Игорь Демьяненко</h3>
                 <p class="description">Product Designer</p>
                 <ul class="list">
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-twitter"></use>
                       </svg>
@@ -196,8 +283,7 @@
                     </a>
                   </li>
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-linkedin"></use>
                       </svg>
@@ -209,51 +295,88 @@
             <li class="team-item">
               <div class="thumb">
                 <picture>
-  <source srcset="./images/index-images/team/team-2-desktop.webp 1x, ./images/index-images/team/team-2-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp" />
-<source srcset="./images/index-images/team/team-2-desktop.jpg 1x, ./images/index-images/team/team-2-desktop@2x.jpg 2x" media="(min-width:1200px)" />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-2-desktop.webp    1x,
+                      ./images/index-images/team/team-2-desktop@2x.webp 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-2-desktop.jpg    1x,
+                      ./images/index-images/team/team-2-desktop@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
 
-  <source srcset="./images/index-images/team/team-2-tablet.webp 1x, ./images/index-images/team/team-2-tablet@2x.webp 2x" media="(min-width:768px)" type="image/webp" />
-  <source srcset="./images/index-images/team/team-2-tablet.jpg 1x, ./images/index-images/team/team-2-tablet@2x.jpg 2x" media="(min-width:768px)" />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-2-tablet.webp    1x,
+                      ./images/index-images/team/team-2-tablet@2x.webp 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-2-tablet.jpg    1x,
+                      ./images/index-images/team/team-2-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
 
-  <source srcset="./images/index-images/team/team-2-mobile.webp 1x, ./images/index-images/team/team-2-mobile@2x.webp 2x" media="(min-width:320px)" type="image/webp">
-    <source srcset="./images/index-images/team/team-2-mobile.jpg 1x, ./images/index-images/team/team-2-mobile@2x.jpg 2x" media="(min-width:320px)">
-   <img class="team-picture"
-                src="./images/index-images/team/team-2.jpg"
-                alt="Фото сотрудника"/>
-</picture>
-                            </div>
-              
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-2-mobile.webp    1x,
+                      ./images/index-images/team/team-2-mobile@2x.webp 2x
+                    "
+                    media="(min-width:320px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-2-mobile.jpg    1x,
+                      ./images/index-images/team/team-2-mobile@2x.jpg 2x
+                    "
+                    media="(min-width:320px)"
+                  />
+                  <img
+                    class="team-picture"
+                    src="./images/index-images/team/team-2.jpg"
+                    alt="Фото сотрудника"
+                  />
+                </picture>
+              </div>
+
               <div class="team-item-content">
                 <h3 class="title">Ольга Репина</h3>
                 <p class="description">Frontend Developer</p>
                 <ul class="list">
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-linkedin"></use>
                       </svg>
@@ -265,52 +388,88 @@
             <li class="team-item">
               <div class="thumb">
                 <picture>
-  <source srcset="./images/index-images/team/team-3-desktop.webp 1x, ./images/index-images/team/team-3-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp" />
-<source srcset="./images/index-images/team/team-3-desktop.jpg 1x, ./images/index-images/team/team-3-desktop@2x.jpg 2x" media="(min-width:1200px)" />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-3-desktop.webp    1x,
+                      ./images/index-images/team/team-3-desktop@2x.webp 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-3-desktop.jpg    1x,
+                      ./images/index-images/team/team-3-desktop@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
 
-  <source srcset="./images/index-images/team/team-3-tablet.webp 1x, ./images/index-images/team/team-3-tablet@2x.webp 2x" media="(min-width:768px)" type="image/webp" />
-  <source srcset="./images/index-images/team/team-3-tablet.jpg 1x, ./images/index-images/team/team-3-tablet@2x.jpg 2x" media="(min-width:768px)" />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-3-tablet.webp    1x,
+                      ./images/index-images/team/team-3-tablet@2x.webp 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-3-tablet.jpg    1x,
+                      ./images/index-images/team/team-3-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
 
-  <source srcset="./images/index-images/team/team-3-mobile.webp 1x, ./images/index-images/team/team-3-mobile@2x.webp 2x" media="(min-width:320px)" type="image/webp">
-    <source srcset="./images/index-images/team/team-3-mobile.jpg 1x, ./images/index-images/team/team-3-mobile@2x.jpg 2x" media="(min-width:320px)">
-   <img class="team-picture"
-                src="./images/index-images/team/team-3.jpg"
-                alt="Фото сотрудника"/>
-</picture>
-      
-            </div>
-              
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-3-mobile.webp    1x,
+                      ./images/index-images/team/team-3-mobile@2x.webp 2x
+                    "
+                    media="(min-width:320px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-3-mobile.jpg    1x,
+                      ./images/index-images/team/team-3-mobile@2x.jpg 2x
+                    "
+                    media="(min-width:320px)"
+                  />
+                  <img
+                    class="team-picture"
+                    src="./images/index-images/team/team-3.jpg"
+                    alt="Фото сотрудника"
+                  />
+                </picture>
+              </div>
+
               <div class="team-item-content">
                 <h3 class="title">Николай Тарасов</h3>
                 <p class="description">Marketing</p>
                 <ul class="list">
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-linkedin"></use>
                       </svg>
@@ -322,27 +481,67 @@
             <li class="team-item">
               <div class="thumb">
                 <picture>
-  <source srcset="./images/index-images/team/team-4-desktop.webp 1x, ./images/index-images/team/team-4-desktop@2x.webp 2x" media="(min-width:1200px)" type="image/webp" />
-<source srcset="./images/index-images/team/team-4-desktop.jpg 1x, ./images/index-images/team/team-4-desktop@2x.jpg 2x" media="(min-width:1200px)" />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-4-desktop.webp    1x,
+                      ./images/index-images/team/team-4-desktop@2x.webp 2x
+                    "
+                    media="(min-width:1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-4-desktop.jpg    1x,
+                      ./images/index-images/team/team-4-desktop@2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
 
-  <source srcset="./images/index-images/team/team-4-tablet.webp 1x, ./images/index-images/team/team-4-tablet@2x.webp 2x" media="(min-width:768px)" type="image/webp" />
-  <source srcset="./images/index-images/team/team-4-tablet.jpg 1x, ./images/index-images/team/team-4-tablet@2x.jpg 2x" media="(min-width:768px)" />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-4-tablet.webp    1x,
+                      ./images/index-images/team/team-4-tablet@2x.webp 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-4-tablet.jpg    1x,
+                      ./images/index-images/team/team-4-tablet@2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
 
-  <source srcset="./images/index-images/team/team-4-mobile.webp 1x, ./images/index-images/team/team-4-mobile@2x.webp 2x" media="(min-width:320px)" type="image/webp">
-    <source srcset="./images/index-images/team/team-4-mobile.jpg 1x, ./images/index-images/team/team-4-mobile@2x.jpg 2x" media="(min-width:320px)">
-   <img class="team-picture"
-                src="./images/index-images/team/team-4.jpg"
-                alt="Фото сотрудника"/>
-</picture>
-               </div>
-             
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-4-mobile.webp    1x,
+                      ./images/index-images/team/team-4-mobile@2x.webp 2x
+                    "
+                    media="(min-width:320px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/index-images/team/team-4-mobile.jpg    1x,
+                      ./images/index-images/team/team-4-mobile@2x.jpg 2x
+                    "
+                    media="(min-width:320px)"
+                  />
+                  <img
+                    class="team-picture"
+                    src="./images/index-images/team/team-4.jpg"
+                    alt="Фото сотрудника"
+                  />
+                </picture>
+              </div>
+
               <div class="team-item-content">
                 <h3 class="title">Михаил Ермаков</h3>
                 <p class="description">UI Designer</p>
                 <ul class="list">
                   <li class="social-list-item">
-                    <a href="#" class="social-link"
-                      >
+                    <a href="#" class="social-link">
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
@@ -428,68 +627,69 @@
         </div>
       </section>
       <!-- OUR CLIENTS END -->
+    </main>
     <!-- </main> -->
 
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-tablet-wrapper"> 
+        <div class="footer-tablet-wrapper">
           <div class="footer-wrapper">
-          <a href="/" class="logo"><span class="accent">Web</span>Studio</a>
-          <address class="footer-contacts">
-            <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="contacts-wrapper list">
-              <li class="footer-contact-item">
-                <a href="mailto:info@example.com" class="contacts email"
-                  >info@example.com</a
-                >
+            <a href="/" class="logo"><span class="accent">Web</span>Studio</a>
+            <address class="footer-contacts">
+              <p class="address">г. Киев, пр-т Леси Украинки, 26</p>
+              <ul class="contacts-wrapper list">
+                <li class="footer-contact-item">
+                  <a href="mailto:info@example.com" class="contacts email"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer-contact-item">
+                  <a href="tel:+380991111111" class="contacts"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="join-wrapper">
+            <p class="join">присоединяйтесь</p>
+            <ul class="social-links list">
+              <li class="social-list-item">
+                <a href="#" class="social-link"
+                  ><svg class="social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-contact-item">
-                <a href="tel:+380991111111" class="contacts"
-                  >+38 099 111 11 11</a
-                >
+              <li class="social-list-item">
+                <a href="#" class="social-link"
+                  ><svg class="social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item">
+                <a href="#" class="social-link"
+                  ><svg class="social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list-item">
+                <a href="#" class="social-link"
+                  ><svg class="social-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="join-wrapper">
-          <p class="join">присоединяйтесь</p>
-          <ul class="social-links list">
-            <li class="social-list-item">
-              <a href="#" class="social-link"
-                ><svg class="social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list-item">
-              <a href="#" class="social-link"
-                ><svg class="social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list-item">
-              <a href="#" class="social-link"
-                ><svg class="social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list-item">
-              <a href="#" class="social-link"
-                ><svg class="social-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div></div>
-       
 
         <div class="subscribe-wrapper">
           <p class="subscribe-title">Подпишитесь на рассылку</p>
-            <form class="subscribe-form">
+          <form class="subscribe-form">
             <input
               class="input-field"
               type="text"
@@ -498,7 +698,6 @@
             />
             <button class="subscribe-btn" type="submit">Подписаться</button>
           </form>
-         
         </div>
       </div>
     </footer>
@@ -507,7 +706,7 @@
     <!-- MODAL -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close-btn" data-modal-close>
+        <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-btn-icon" width="11" height="11">
             <use href="./images/sprite.svg#close-btn-icon"></use>
           </svg>
@@ -578,5 +777,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
