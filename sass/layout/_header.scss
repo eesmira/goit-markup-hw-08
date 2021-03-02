@@ -40,6 +40,10 @@
         letter-spacing: 0.02em;
         color: var(--secondary-txt-color);
         text-decoration: none;
+
+        &:active {
+          color: var(--accent-color);
+        }
       }
     }
 
@@ -100,26 +104,17 @@
 
 @media screen and (min-width: 1200px) {
   .header {
+    box-sizing: content-box;
     position: fixed;
     z-index: 99;
     width: 100%;
     min-height: 80px;
     top: 0;
 
-    .container {
-      display: flex;
-      align-items: center;
-    }
-
     .contacts {
       margin-bottom: 0;
-      display: flex;
       flex-direction: row;
       align-items: center;
-
-      .list-item {
-        display: inline-flex;
-      }
 
       .list-item + .list-item {
         margin-top: 0;
@@ -129,12 +124,8 @@
       .link {
         padding-top: 32px;
         padding-bottom: 32px;
-        font-weight: 500;
         font-size: 14px;
         line-height: 1.14;
-        letter-spacing: 0.02em;
-        color: var(--secondary-txt-color);
-        text-decoration: none;
         transition: color var(--transition-duration)
           var(--transition-timing-function);
 
@@ -146,33 +137,11 @@
     }
   }
 
-  .nav-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
   .site-nav {
-    display: flex;
-
-    .list-item {
-      &:not(:last-child) {
-        margin-right: 50px;
-      }
-    }
     .link {
-      display: block;
-      padding-top: 32px;
-      padding-bottom: 32px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.14;
-      letter-spacing: 0.02em;
-      color: var(--primary-txt-color);
-      text-decoration: none;
       transition: color var(--transition-duration)
         var(--transition-timing-function);
 
-      &.current,
       &:hover,
       &:focus,
       &:active {
@@ -181,18 +150,16 @@
     }
   }
 
-  .header-contact {
-    display: flex;
-    align-items: center;
-  }
-
-  .contacts.list {
-    margin-left: auto;
-  }
-
   .contacts-icon {
     margin-right: 10px;
-    align-self: center;
-    fill: currentColor;
+  }
+
+  .email-icon {
+    width: 16px;
+    height: 12px;
+  }
+  .tel-icon {
+    width: 10px;
+    height: 16px;
   }
 }

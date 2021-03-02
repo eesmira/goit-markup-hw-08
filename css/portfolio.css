@@ -161,6 +161,9 @@ img {
     color: var(--secondary-txt-color);
     text-decoration: none;
   }
+  .header .contacts .link:active {
+    color: var(--accent-color);
+  }
   .header .nav-wrapper {
     display: flex;
     align-items: center;
@@ -209,24 +212,17 @@ img {
 
 @media screen and (min-width: 1200px) {
   .header {
+    box-sizing: content-box;
     position: fixed;
     z-index: 99;
     width: 100%;
     min-height: 80px;
     top: 0;
   }
-  .header .container {
-    display: flex;
-    align-items: center;
-  }
   .header .contacts {
     margin-bottom: 0;
-    display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  .header .contacts .list-item {
-    display: inline-flex;
   }
   .header .contacts .list-item + .list-item {
     margin-top: 0;
@@ -235,53 +231,29 @@ img {
   .header .contacts .link {
     padding-top: 32px;
     padding-bottom: 32px;
-    font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--secondary-txt-color);
-    text-decoration: none;
     transition: color var(--transition-duration) var(--transition-timing-function);
   }
   .header .contacts .link:hover, .header .contacts .link:focus {
     color: var(--accent-color);
   }
-  .nav-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  .site-nav {
-    display: flex;
-  }
-  .site-nav .list-item:not(:last-child) {
-    margin-right: 50px;
-  }
   .site-nav .link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--primary-txt-color);
-    text-decoration: none;
     transition: color var(--transition-duration) var(--transition-timing-function);
   }
-  .site-nav .link.current, .site-nav .link:hover, .site-nav .link:focus, .site-nav .link:active {
+  .site-nav .link:hover, .site-nav .link:focus, .site-nav .link:active {
     color: var(--accent-color);
-  }
-  .header-contact {
-    display: flex;
-    align-items: center;
-  }
-  .contacts.list {
-    margin-left: auto;
   }
   .contacts-icon {
     margin-right: 10px;
-    align-self: center;
-    fill: currentColor;
+  }
+  .email-icon {
+    width: 16px;
+    height: 12px;
+  }
+  .tel-icon {
+    width: 10px;
+    height: 16px;
   }
 }
 
@@ -620,6 +592,35 @@ img {
   overflow: hidden;
 }
 
+.logo {
+  display: block;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  color: var(--primary-logo-color);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    line-height: 1.167;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+    font-size: 26px;
+  }
+}
+
 .select-btn {
   font-weight: 500;
   font-size: 16px;
@@ -651,5 +652,37 @@ img {
 
 .filter-button + .filter-button {
   margin-left: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .select-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    color: var(--primary-txt-color);
+    background-color: var(--secondary-bg-color);
+    border: none;
+    text-align: center;
+    color: var(--primary-txt-color);
+    padding: 6px 22px;
+    border-radius: 4px;
+    outline: none;
+    transition: color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
+  }
+  .select-btn:hover, .select-btn:focus, .select-btn:active {
+    cursor: pointer;
+    color: var(--additional-txt-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  .portfolio .filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .filter-button + .filter-button {
+    margin-left: 8px;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */

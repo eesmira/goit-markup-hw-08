@@ -51,16 +51,16 @@
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/index-images/hero-tablet.jpg);
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url(../images/index-images/hero-tablet@2x.jpg);
-    }
+    // @media screen and (min-device-pixel-ratio: 2),
+    //   screen and (min-resolution: 192dpi),
+    //   screen and (min-resolution: 2dppx) {
+    //   background-image: linear-gradient(
+    //       to right,
+    //       rgba(47, 48, 58, 0.4),
+    //       rgba(47, 48, 58, 0.4)
+    //     ),
+    //     url(../images/index-images/hero-tablet@2x.jpg);
+    // }
   }
 }
 
@@ -75,17 +75,18 @@
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/index-images/hero-desktop.jpg);
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url(../images/index-images/hero-desktop@2x.jpg);
-    }
+    // @media screen and (min-device-pixel-ratio: 2),
+    //   screen and (min-resolution: 192dpi),
+    //   screen and (min-resolution: 2dppx) {
+    //   background-image: linear-gradient(
+    //       to right,
+    //       rgba(47, 48, 58, 0.4),
+    //       rgba(47, 48, 58, 0.4)
+    //     ),
+    //     url(../images/index-images/hero-desktop@2x.jpg);
+    // }
   }
+}
 
 .modal-btn {
   cursor: pointer;

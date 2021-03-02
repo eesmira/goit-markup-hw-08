@@ -139,6 +139,7 @@ img {
     margin-right: 88px;
     padding-top: 26px;
     padding-bottom: 26px;
+    line-height: 1.167;
   }
 }
 
@@ -206,6 +207,9 @@ img {
     color: var(--secondary-txt-color);
     text-decoration: none;
   }
+  .header .contacts .link:active {
+    color: var(--accent-color);
+  }
   .header .nav-wrapper {
     display: flex;
     align-items: center;
@@ -254,24 +258,17 @@ img {
 
 @media screen and (min-width: 1200px) {
   .header {
+    box-sizing: content-box;
     position: fixed;
     z-index: 99;
     width: 100%;
     min-height: 80px;
     top: 0;
   }
-  .header .container {
-    display: flex;
-    align-items: center;
-  }
   .header .contacts {
     margin-bottom: 0;
-    display: flex;
     flex-direction: row;
     align-items: center;
-  }
-  .header .contacts .list-item {
-    display: inline-flex;
   }
   .header .contacts .list-item + .list-item {
     margin-top: 0;
@@ -280,53 +277,29 @@ img {
   .header .contacts .link {
     padding-top: 32px;
     padding-bottom: 32px;
-    font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--secondary-txt-color);
-    text-decoration: none;
     transition: color var(--transition-duration) var(--transition-timing-function);
   }
   .header .contacts .link:hover, .header .contacts .link:focus {
     color: var(--accent-color);
   }
-  .nav-wrapper {
-    display: flex;
-    align-items: center;
-  }
-  .site-nav {
-    display: flex;
-  }
-  .site-nav .list-item:not(:last-child) {
-    margin-right: 50px;
-  }
   .site-nav .link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--primary-txt-color);
-    text-decoration: none;
     transition: color var(--transition-duration) var(--transition-timing-function);
   }
-  .site-nav .link.current, .site-nav .link:hover, .site-nav .link:focus, .site-nav .link:active {
+  .site-nav .link:hover, .site-nav .link:focus, .site-nav .link:active {
     color: var(--accent-color);
-  }
-  .header-contact {
-    display: flex;
-    align-items: center;
-  }
-  .contacts.list {
-    margin-left: auto;
   }
   .contacts-icon {
     margin-right: 10px;
-    align-self: center;
-    fill: currentColor;
+  }
+  .email-icon {
+    width: 16px;
+    height: 12px;
+  }
+  .tel-icon {
+    width: 10px;
+    height: 16px;
   }
 }
 
@@ -369,6 +342,21 @@ img {
   background-color: var(--accent-color);
   padding: 10px 32px;
   border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index-images/hero-tablet.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/index-images/hero-desktop.jpg);
+  }
 }
 
 .modal-btn {
@@ -962,11 +950,6 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 450px;
-  width: 95%;
-  max-height: 609px;
-  height: 90%;
-  overflow: scroll;
   background-color: var(--primary-bg-color);
   border-radius: 4px;
   transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1090,9 +1073,7 @@ img {
 }
 
 .check-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   margin-bottom: 31px;
   font-weight: normal;
   font-size: 12px;
@@ -1104,6 +1085,7 @@ img {
 .check-label::before {
   content: '';
   display: inline-block;
+  vertical-align: bottom;
   width: 16px;
   height: 15px;
   margin-right: 7px;
@@ -1158,6 +1140,16 @@ img {
   color: var(--additional-txt-color);
 }
 
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .modal {
+    max-width: 450px;
+    width: 95%;
+    max-height: 609px;
+    height: 90%;
+    overflow: scroll;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -1181,6 +1173,13 @@ img {
   }
   .input-msg {
     cursor: pointer;
+  }
+  .check-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.714;
   }
   .modal-submit-btn {
     cursor: pointer;
