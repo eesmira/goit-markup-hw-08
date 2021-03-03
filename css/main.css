@@ -398,7 +398,7 @@ img {
   text-decoration: none;
   font-weight: 500;
   font-size: 34px;
-  line-height: 1, 176;
+  line-height: 1.176;
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
@@ -407,7 +407,7 @@ img {
   text-decoration: none;
   font-weight: 500;
   font-size: 24px;
-  line-height: 1, 167;
+  line-height: 1.167;
   letter-spacing: 0.02em;
   color: var(--secondary-txt-color);
 }
