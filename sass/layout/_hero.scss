@@ -46,6 +46,14 @@
   background-color: var(--accent-color);
   padding: 10px 32px;
   border: none;
+
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -95,11 +103,4 @@
 
 .modal-btn {
   cursor: pointer;
-  transition: background-color var(--transition-duration)
-    var(--transition-timing-function);
-
-  &:hover,
-  &:focus {
-    background-color: #188ce8;
-  }
 }

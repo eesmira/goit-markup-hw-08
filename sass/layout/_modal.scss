@@ -24,7 +24,6 @@
   transform: translate(-50%, -50%);
   background-color: var(--primary-bg-color);
   border-radius: 4px;
-  // transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -43,6 +42,8 @@
   color: var(--primary-logo-color);
   fill: currentColor;
 
+  .modal-close-btn:hover &,
+  .modal-close-btn:focus &,
   .modal-close-btn:active & {
     color: var(--accent-color);
     fill: currentColor;
@@ -165,6 +166,10 @@
     background-image: url(../images/checkbox.svg);
     background-color: transparent;
   }
+
+  @media screen and (max-width: 410px) {
+    font-size: 10px;
+  }
 }
 
 .check-input:checked + .check-label::before {
@@ -236,12 +241,6 @@
   .modal-btn-icon {
     transition: color var(--transition-duration)
       var(--transition-timing-function);
-
-    .modal-close-btn:hover &,
-    .modal-close-btn:focus & {
-      color: var(--accent-color);
-      fill: currentColor;
-    }
   }
 
   .contact-form {

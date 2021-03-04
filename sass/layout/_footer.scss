@@ -22,6 +22,14 @@
     letter-spacing: 0.03em;
     color: var(--footer-contacts-color);
     text-decoration: none;
+    transition: color var(--transition-duration)
+      var(--transition-timing-function);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--accent-color);
+    }
   }
 }
 
@@ -95,6 +103,14 @@
     border-radius: 50%;
     color: var(--additional-txt-color);
     fill: currentColor;
+    transition: background-color var(--transition-duration)
+      var(--transition-timing-function);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--accent-color);
+    }
   }
 }
 
@@ -185,23 +201,17 @@
 
 @media screen and(min-width: 1200px) {
   .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-
     .container {
       display: flex;
       align-items: baseline;
     }
 
     .logo {
-      display: inline-block;
       text-align: left;
     }
 
     .contacts {
       display: inline-block;
-      transition: color var(--transition-duration)
-        var(--transition-timing-function);
     }
   }
 
@@ -227,11 +237,6 @@
     }
   }
 
-  .contacts-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
   .join {
     text-align: left;
   }
@@ -240,22 +245,11 @@
     margin-bottom: 0;
   }
 
-  .social-link {
-    transition: background-color var(--transition-duration)
-      var(--transition-timing-function);
-
-    &:hover,
-    &:focus {
-      background-color: var(--accent-color);
-    }
-  }
-
   .subscribe-wrapper {
     margin-left: auto;
   }
 
   .subscribe-form {
-    display: flex;
     flex-direction: row;
   }
 
@@ -270,10 +264,5 @@
 
   .subscribe-btn {
     margin-left: 12px;
-  }
-
-  .footer .contacts:hover,
-  .footer .contacts:focus {
-    color: var(--accent-color);
   }
 }

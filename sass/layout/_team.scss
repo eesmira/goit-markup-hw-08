@@ -46,6 +46,15 @@
     border-radius: 50%;
     color: var(--icon-color);
     fill: currentColor;
+    transition: color var(--transition-duration)
+        var(--transition-timing-function),
+      background-color var(--transition-duration)
+        var(--transition-timing-function);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      color: var(--additional-txt-color);
+    }
   }
 }
 
@@ -102,18 +111,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .social-link {
-      transition: color var(--transition-duration)
-          var(--transition-timing-function),
-        background-color var(--transition-duration)
-          var(--transition-timing-function);
-      &:hover,
-      &:focus {
-        background-color: var(--accent-color);
-        color: var(--additional-txt-color);
-      }
     }
   }
 }

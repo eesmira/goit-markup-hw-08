@@ -267,11 +267,13 @@ img {
   top: 0;
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
+  overflow: scroll;
   background-color: var(--primary-bg-color);
   transition: all 500ms var(--transition-timing-function);
 }
 
 .mobile-menu.is-open {
+  position: fixed;
   transform: translateX(-50%) translateY(0%);
 }
 
@@ -292,7 +294,9 @@ img {
   fill: var(--mobile-menu-primary-color);
 }
 
-.mobile-menu-close-btn:active .mobile-menu-close-icon {
+.mobile-menu-close-btn:hover .mobile-menu-close-icon,
+.mobile-menu-close-btn:focus .mobile-menu-close-icon,
+.mobile-menu-close-icon .mobile-menu-close-btn:active {
   color: var(--accent-color);
   fill: currentColor;
 }
@@ -318,6 +322,8 @@ img {
   fill: var(--mobile-menu-primary-color);
 }
 
+.mobile-menu-btn:hover .mobile-menu-icon,
+.mobile-menu-btn:focus .mobile-menu-icon,
 .mobile-menu-btn:active .mobile-menu-icon {
   color: var(--accent-color);
   fill: currentColor;
@@ -336,15 +342,11 @@ img {
   letter-spacing: 0.02em;
 }
 
-.mobile-menu-link.current {
+.mobile-menu-link.current, .mobile-menu-link:hover, .mobile-menu-link:focus, .mobile-menu-link:active {
   color: var(--accent-color);
 }
 
-.mobile-menu-contacts {
-  padding-top: 200px;
-}
-
-.contacts-item:not(:last-child) {
+.mobile-menu-contacts .contacts-item:not(:last-child) {
   margin-bottom: 32px;
 }
 
@@ -429,6 +431,11 @@ img {
   letter-spacing: 0.03em;
   color: var(--footer-contacts-color);
   text-decoration: none;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+.footer .contacts:hover, .footer .contacts:focus, .footer .contacts:active {
+  color: var(--accent-color);
 }
 
 .footer-wrapper {
@@ -503,6 +510,11 @@ img {
   border-radius: 50%;
   color: var(--additional-txt-color);
   fill: currentColor;
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
+}
+
+.social-links .social-link:hover, .social-links .social-link:focus, .social-links .social-link:active {
+  background-color: var(--accent-color);
 }
 
 .subscribe-form {
@@ -588,21 +600,15 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
   .footer .container {
     display: flex;
     align-items: baseline;
   }
   .footer .logo {
-    display: inline-block;
     text-align: left;
   }
   .footer .contacts {
     display: inline-block;
-    transition: color var(--transition-duration) var(--transition-timing-function);
   }
   .footer-tablet-wrapper {
     align-items: baseline;
@@ -619,27 +625,16 @@ img {
   .footer-contact-item:last-child {
     margin-bottom: 0;
   }
-  .contacts-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
   .join {
     text-align: left;
   }
   .social-links {
     margin-bottom: 0;
   }
-  .social-link {
-    transition: background-color var(--transition-duration) var(--transition-timing-function);
-  }
-  .social-link:hover, .social-link:focus {
-    background-color: var(--accent-color);
-  }
   .subscribe-wrapper {
     margin-left: auto;
   }
   .subscribe-form {
-    display: flex;
     flex-direction: row;
   }
   .subscribe-title {
@@ -651,10 +646,6 @@ img {
   }
   .subscribe-btn {
     margin-left: 12px;
-  }
-  .footer .contacts:hover,
-  .footer .contacts:focus {
-    color: var(--accent-color);
   }
 }
 
@@ -710,6 +701,8 @@ img {
   transition: transform var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
 }
 
+.projects .link:hover .overlay,
+.projects .link:focus .overlay,
 .projects .link:active .overlay {
   transform: translateY(0%);
   background-color: rgba(33, 150, 243, 0.9);
@@ -751,11 +744,6 @@ img {
   }
   .overlay {
     padding: 63px 24px;
-  }
-  .projects .link:hover .overlay,
-  .projects .link:focus .overlay {
-    transform: translateY(0%);
-    background-color: rgba(33, 150, 243, 0.9);
   }
 }
 
@@ -804,7 +792,7 @@ img {
   transition: color var(--transition-duration) var(--transition-timing-function), box-shadow var(--transition-duration) var(--transition-timing-function), background-color var(--transition-duration) var(--transition-timing-function);
 }
 
-.select-btn:focus, .select-btn:active {
+.select-btn:hover, .select-btn:focus, .select-btn:active {
   cursor: pointer;
   color: var(--additional-txt-color);
   background-color: var(--accent-color);
@@ -835,12 +823,6 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .select-btn:hover {
-    cursor: pointer;
-    color: var(--additional-txt-color);
-    background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
   .portfolio .filter {
     margin-bottom: 50px;
   }

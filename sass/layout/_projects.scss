@@ -58,6 +58,8 @@
     background-color var(--transition-duration)
       var(--transition-timing-function);
 
+  .projects .link:hover &,
+  .projects .link:focus &,
   .projects .link:active & {
     transform: translateY(0%);
     background-color: rgba(33, 150, 243, 0.9);
@@ -104,11 +106,5 @@
 
   .overlay {
     padding: 63px 24px;
-
-    .projects .link:hover &,
-    .projects .link:focus & {
-      transform: translateY(0%);
-      background-color: rgba(33, 150, 243, 0.9);
-    }
   }
 }

@@ -26,6 +26,8 @@
   color: var(--icon-color);
   fill: currentColor;
 
+  &:hover,
+  &:focus,
   &:active {
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
@@ -61,11 +63,5 @@
     transition: color var(--transition-duration)
         var(--transition-timing-function),
       border var(--transition-duration) var(--transition-timing-function);
-
-    &:hover,
-    &:focus {
-      border: 1px solid var(--accent-color);
-      color: var(--accent-color);
-    }
   }
 }
