@@ -312,15 +312,17 @@ img {
   height: 100vh;
   top: 0;
   left: 50%;
-  transform: translateX(-50%) translateY(-100%);
-  overflow: scroll;
+  transform: scale(0);
+  transform-origin: 90% -50%;
+  overflow: hidden;
   background-color: var(--primary-bg-color);
-  transition: all 500ms var(--transition-timing-function);
+  transition: all 1000ms var(--transition-timing-function);
 }
 
 .mobile-menu.is-open {
   position: fixed;
-  transform: translateX(-50%) translateY(0%);
+  transform: scale(1) translateX(-50%);
+  overflow: scroll;
 }
 
 .mobile-menu-close-btn {
