@@ -41,12 +41,6 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .features-section .title {
-    text-align: left;
-  }
-}
-
 .icon-antenna {
   &::before {
     background-image: url(../images/antenna.svg);
@@ -73,6 +67,9 @@
 
 @media screen and (min-width: 768px) {
   .features-section {
+    .title {
+      text-align: left;
+    }
     .description {
       margin-bottom: 0;
     }

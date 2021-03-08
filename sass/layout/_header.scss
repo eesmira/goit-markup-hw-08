@@ -41,7 +41,11 @@
         letter-spacing: 0.02em;
         color: var(--secondary-txt-color);
         text-decoration: none;
+        transition: color var(--transition-duration)
+          var(--transition-timing-function);
 
+        &:hover,
+        &:focus,
         &:active {
           color: var(--accent-color);
         }
@@ -71,8 +75,13 @@
         letter-spacing: 0.02em;
         color: var(--primary-txt-color);
         text-decoration: none;
+        transition: color var(--transition-duration)
+          var(--transition-timing-function);
 
-        &.current {
+        &.current,
+        &:hover,
+        &:focus,
+        &:active {
           color: var(--accent-color);
         }
       }
@@ -127,26 +136,6 @@
         padding-bottom: 32px;
         font-size: 14px;
         line-height: 1.14;
-        transition: color var(--transition-duration)
-          var(--transition-timing-function);
-
-        &:hover,
-        &:focus {
-          color: var(--accent-color);
-        }
-      }
-    }
-  }
-
-  .site-nav {
-    .link {
-      transition: color var(--transition-duration)
-        var(--transition-timing-function);
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: var(--accent-color);
       }
     }
   }
